@@ -585,16 +585,95 @@ h2 {
   width: 100%;
 }
 
-#projects a {
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: bold;
-  color:#373737;
+#projects li {
+  float: left;
+  width: 100%;
+  list-style-type:none;
 }
 
-#projects a:hover {
-  font-size: 20px;
+#projects li div.holder {
+  float: left;
+  margin-bottom: 12px;
+  margin-right: 10px;
+  padding:10px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  background-color: #E7E7E7;
 }
+
+#projects li div.holder img {
+  width:300px;
+  height:180px;
+  display: block;
+  border:none;
+}
+
+#projects li div.holder span.view-larger {
+  background-color: #F2F2F2;
+  left:0;
+  margin:10px;
+  padding-bottom: 78px;
+  padding-top:80px;
+  position: absolute;
+  text-align: center;
+  top:0;
+  width :300px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition:all 0.5s;
+  transition:all 0.5s;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#projects li div.holder:hover img {
+    filter: none; /* IE6-9 */
+    -webkit-filter: none; /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+
+
+#projects li div.holder span.view-larger a {
+  background-color: #373737;
+  color: #fff;
+  font-style: italic;
+  padding: 0 2px;
+}
+#projects  li div.holder:hover > span.view-larger {
+  opacity:100;
+  filter:alpha(opacity=100);
+}
+
+#projects li div.holder:hover > span.description {
+  display: block;
+  bottom:0;
+}
+
+.no-margin {
+  margin-left: -40px !important;
+
+}
+
+#projects li div.holder:nth-child(3N+3) {
+  margin-right: 0;
+}
+
+#projects li div.holder span.description {
+  position: absolute;
+  background-color: #FFFFFF;
+  width:300px;
+  bottom: -50px;
+  left: 0;
+  color:#373737;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition:all 0.5s;
+  transition:all 0.5s;
+}
+
+
 
 #contact {
   margin:0 auto;
@@ -655,6 +734,7 @@ input[type="submit"] {
   clear:both;
   float: left;
   margin-bottom: 6px;
+  color: #373737;
 }
 
 #contact a {
@@ -692,17 +772,63 @@ input[type="submit"] {
   transition: all 0.5s;
 }
 
+#follow a.circle:hover > span.followme {
+  display:block;
+}
+
+#follow a.twitter:hover > span.twitter {
+  top:32px;
+  color:#46D1FF;
+}
+
+#follow a.in:hover > span.in {
+  top:32px;
+  color:#0099cc;
+}
+
+#follow a.facebook:hover > span.facebook {
+  top:32px;
+  color:#074590;
+}
+
+#follow a.gplus:hover > span.gplus {
+  top:32px;
+  color:#DD4B39;
+}
+#follow a.instagram:hover > span.instagram {
+  top:32px;
+  color:#eddd9e;
+}
+
 span.followme {
-  color:#373737;
+  color: #373737;
   font-size: 12px;
-  left: 0px;
+  left: 0;
   padding-top: 37px;
   position: absolute;
-  top:12px;
-  width:92px;
-  display: none;
+  top: 12px;
+  width: 92px;
+  display:none;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+
+#footer .share-social {
+  float: right;
+  width: 250px;
+}
+
+#footer .share-social .instagram {
+  float: right;
+  width: 98px;
+  margin-top: -1px;
+}
+
+.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-24 { width: 24px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-24.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+.ig-b-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-24@2x.png); background-size: 60px 178px; } }
